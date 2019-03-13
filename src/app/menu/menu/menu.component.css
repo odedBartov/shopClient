@@ -1,0 +1,39 @@
+ul {
+  max-width: 500px;
+  color: #333;
+  list-style: none;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.list li {
+  padding: 10px;
+  background: #FAFAAF;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 150%;
+  font-weight: 600;
+}
+
+.center {
+  text-align: center;
+}
+.search-results {
+  height: 50px;
+}
+button {
+  margin: 2%;
+}
+h4 {
+  border: 1px solid black
+}
+.actions {
+  margin-left: 40%;
+  margin-bottom: 5%;
+}
+.filter {
+  display: flex;
+}
+.item {
+  font-size: 30px
+}

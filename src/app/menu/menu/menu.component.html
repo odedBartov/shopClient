@@ -1,0 +1,24 @@
+<ul class="list">
+  <cdk-virtual-scroll-viewport #scroller style="height: 650px" itemSize="30" (scroll)="Scrolled($event)">
+    <ng-container *cdkVirtualFor="let product of products">
+      <li (click)="clickProduct(product)" style="cursor: pointer">{{product.product}} {{product._id}}</li>
+    </ng-container>
+  </cdk-virtual-scroll-viewport>
+</ul>
+<div class="actions">
+  <div class="sort">
+    <button class="btn btn-info" (click)="sortByPrice()">Sort by price</button>
+    <button class="btn btn-success" (click)="sortByName()">Sort by Name</button>
+  </div>
+  <div class="filter">
+    <div>
+      <input #filt type="text" (input)="filterInput(filt)">
+      <button class="btn btn-secondary" (click)="filterMainList(filt)">Filter</button>
+      <div *ngFor="let product of filteredProducts" style="display: flex">
+        <h4 (click)="clickProduct(product)" style="cursor: pointer">
+          {{product.product}}
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
